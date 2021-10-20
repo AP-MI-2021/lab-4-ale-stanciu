@@ -5,7 +5,7 @@ def printMenu():
     print("3. Afișați suma tuturor numerelor întregi pare din lista")
     print(
         "4. Afișați toate numere din lista care sunt pare. Daca se repeta un numar, acesta va apărea în lista rezultat doar o singura data.")
-
+    print("x. Iesire")
 
 def citire_lista():
     l = []
@@ -22,9 +22,6 @@ def gasire_numar(lst, numar, pozitia):
     :param n:
     :return: True, daca un număr citit de la tastatura se regaseste in lista începând de la o anumită poziție citită de la tastatură, False in caz contrar
     """
-    # for i in range(pozitia, len(lst),1):
-    # if
-
     for x in lst:
         index = lst.index(x)
         if index >= pozitia and x == numar:
@@ -102,6 +99,10 @@ def main():
             print(suma_parelor(lst))
         elif optiune == "4":
             print(afisare_pare(lst))
+        elif optiune == "x":
+            break
+        else:
+            print("Optiune gresita! Reincercati!")
 
 
 if __name__ == '__main__':
